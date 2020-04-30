@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/et_input_val"
+        android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
@@ -16,7 +16,8 @@
         android:layout_marginRight="96dp"
         android:ems="10"
         android:focusable="false"
-        android:inputType="numberSigned|number"
+        android:focusableInTouchMode="false"
+        android:inputType="numberSigned|numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -214,11 +215,11 @@
         app:layout_constraintStart_toEndOf="@+id/bt_equal" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/operation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="100dp"
         android:textSize="18sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/new_number"
         app:layout_constraintEnd_toStartOf="@+id/new_number"
@@ -236,9 +237,10 @@
         android:layout_marginRight="96dp"
         android:ems="10"
         android:focusable="false"
-        android:inputType="numberSigned|number"
+        android:focusableInTouchMode="false"
+        android:inputType="numberSigned|number|numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_input_val" />
+        app:layout_constraintTop_toBottomOf="@+id/result" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
